@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import RPi.GPIO as GPIO
 from subprocess import check_output
@@ -11,8 +11,6 @@ FAN_CONTROL_PIN_NUMBER = 21
 TEMP_WHEN_FAN_TURNS_ON_IN_CELSIUS = 55.0
 TEMP_WHEN_FAN_TURNS_OFF_IN_CELSIUS = 50.0
 TEMP_CHECK_INTERVAL_IN_SECONDS = 10
-
-
 
 
 def get_cpu_temp():
