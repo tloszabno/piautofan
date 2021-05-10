@@ -16,7 +16,7 @@ TEMP_CHECK_INTERVAL_IN_SECONDS = 10
 def get_cpu_temp():
     def __get_temp__internal():
         out = check_output(["/opt/vc/bin/vcgencmd", "measure_temp"])
-        return float(out.split('=')[1].split('\'')[0])
+        return float(out.decode("utf-8").split('=')[1].split('\'')[0])
     try:
         return __get_temp__internal()
     except:
